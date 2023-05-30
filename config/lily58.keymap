@@ -5,8 +5,8 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -45,7 +45,7 @@
             bindings = <
                   &kp ESC    &kp N1     &kp N2      &kp N3        &kp N4                    &kp N5                                                          &kp N6    &kp N7     &kp N8  &kp N9  &kp N0               &kp BACKSPACE
                &caps_word   &kp SQT  &kp COMMA  &kp PERIOD         &kp P                     &kp Y                                                           &kp F     &kp G      &kp C   &kp R   &kp L                    &kp FSLH
-                &lt 3 TAB     &kp A      &kp O       &kp E         &kp U                     &kp I                                                           &kp D     &kp H      &kp T   &kp N   &kp S                 &lt 2 MINUS
+                &lt 3 TAB     &kp A      &kp O       &kp E         &kp U                     &kp I                                                           &kp D     &kp H      &kp T   &kp N   &kp S                 &lt 3 MINUS
 &mt LGUI LEFT_PARENTHESIS  &kp SEMI      &kp Q       &kp J         &kp K                     &kp X  &lt 1 LEFT_BRACKET  &lt 2 RIGHT_BRACKET                  &kp B     &kp M      &kp W   &kp V   &kp Z  &mt RGUI RIGHT_PARENTHESIS
                                                  &kp LCTRL  &kp LEFT_ALT  &mt LEFT_SHIFT BACKSPACE        &mt LGUI TAB       &mt RGUI ENTER  &mt RIGHT_SHIFT SPACE  &kp LEFT  &kp RIGHT
             >;
@@ -96,11 +96,11 @@
 
         ordinal {
             bindings = <
-&trans  &trans  &trans    &trans    &trans     &trans                    &trans        &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &trans     &trans                    &trans        &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &kp UP     &trans                    &trans  &kp UP_ARROW     &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans  &kp LEFT      &kp DOWN  &kp RIGHT  &trans  &trans  &trans
-                          &trans    &trans     &trans  &trans  &trans    &trans      &kp DOWN     &kp UP
+&trans  &trans  &trans    &trans    &trans     &trans                  &kp LA(LC(LG(P)))  &kp LA(LC(UP_ARROW))  &kp LA(LC(LG(N)))  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans     &trans                   &kp LA(LC(LEFT))      &kp LA(LC(DOWN))  &kp LA(LC(RIGHT))  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &kp UP     &trans                  &kp LA(LC(LG(M)))          &kp UP_ARROW  &kp LA(LC(LG(C)))  &trans  &trans  &trans
+&trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans           &kp LEFT              &kp DOWN          &kp RIGHT  &trans  &trans  &trans
+                          &trans    &trans     &trans  &trans  &trans             &trans              &kp DOWN             &kp UP
             >;
 
             label = "ordinal";
