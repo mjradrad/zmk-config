@@ -63,11 +63,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0                         &kp ASTRK  &kp PERCENT  &kp CARET  &kp PLUS             &kp MINUS             &kp DELETE
-    &trans        &trans        &trans        &trans        &trans        &trans                         &kp SLASH       &kp N7     &kp N8    &kp N9  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-    &trans        &trans        &trans        &trans        &trans        &trans                     &kp BACKSLASH       &kp N4     &kp N5    &kp N6      &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-    &trans        &trans        &trans        &trans        &trans        &trans  &trans     &trans      &kp POUND       &kp N1     &kp N2    &kp N3        &kp LEFT_BRACE        &kp RIGHT_BRACE
-                                              &trans        &trans        &trans  &trans  &kp EQUAL   &kp NUMBER_0   &kp PERIOD  &kp ENTER
+&bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0                        &kp CARET   &kp PRCNT  &kp ASTRK  &kp SLASH         &kp BACKSLASH             &kp DELETE
+    &trans        &trans        &trans        &trans        &trans        &trans                         &kp PLUS      &kp N7     &kp N8     &kp N9  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+    &trans        &trans        &trans        &trans        &trans        &trans                        &kp MINUS      &kp N4     &kp N5     &kp N6      &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+    &trans        &trans        &trans        &trans        &trans        &trans  &trans     &trans     &kp POUND      &kp N1     &kp N2     &kp N3        &kp LEFT_BRACE        &kp RIGHT_BRACE
+                                              &trans        &trans        &trans  &trans  &kp EQUAL  &kp NUMBER_0  &kp PERIOD  &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -96,11 +96,11 @@
 
         ordinal {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp LA(LC(LG(P)))    &kp LA(LC(UP))  &kp LA(LC(LG(N)))  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans   &kp LA(LC(LEFT))  &kp LA(LC(DOWN))  &kp LA(LC(RIGHT))  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp LA(LC(LG(M)))            &kp UP  &kp LA(LC(LG(C)))  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &kp LEFT          &kp DOWN          &kp RIGHT  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans             &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp LA(LC(LG(P)))   &kp LC(LA(LEFT))  &kp LA(LC(UP))  &kp LC(LA(RIGHT))  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp LA(LC(LG(N)))   &kp LA(LC(DOWN))    &kp UP_ARROW  &kp LA(LC(RIGHT))  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                             &trans           &kp LEFT        &kp DOWN          &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans             &trans  &kp LA(LC(LG(M)))        &kp DOWN          &kp RIGHT  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans             &trans             &trans          &trans
             >;
 
             label = "ordinal";
