@@ -66,7 +66,7 @@
 &bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0                        &kp CARET   &kp PRCNT  &kp ASTRK  &kp SLASH         &kp BACKSLASH             &kp DELETE
     &trans        &trans        &trans        &trans        &trans        &trans                         &kp PLUS      &kp N7     &kp N8     &kp N9  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
     &trans        &trans        &trans        &trans        &trans        &trans                        &kp MINUS      &kp N4     &kp N5     &kp N6      &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-    &trans        &trans        &trans        &trans        &trans        &trans  &trans     &trans     &kp POUND      &kp N1     &kp N2     &kp N3        &kp LEFT_BRACE        &kp RIGHT_BRACE
+    &trans        &trans        &trans        &trans        &trans        &trans  &trans  &kp GRAVE     &kp POUND      &kp N1     &kp N2     &kp N3        &kp LEFT_BRACE        &kp RIGHT_BRACE
                                               &trans        &trans        &trans  &trans  &kp EQUAL  &kp NUMBER_0  &kp PERIOD  &kp ENTER
             >;
 
@@ -83,11 +83,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-   &kp GRAVE                &kp F1                &kp F2     &kp F3        &kp F4     &kp F5                                &trans  &trans  &trans  &trans  &trans     &m1
-&kp C_VOL_UP                &kp F6                &kp F7     &kp F8        &kp F9    &kp F10                                &trans  &trans  &trans  &trans  &trans  &trans
-&kp C_VOL_DN               &kp F11               &kp F12  &kp LG(Z)  &kp UP_ARROW  &kp LG(Y)                                &trans  &trans  &trans  &trans  &trans  &trans
-  &kp K_MUTE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC   &kp LEFT      &kp DOWN  &kp RIGHT                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                             &trans        &trans     &trans  &kp LS(LG(NUMBER_4))  &trans  &trans  &trans  &trans
+&kp LC(LS(ESCAPE))     &kp F1     &kp F2     &kp F3     &kp F4         &kp F5                                &trans  &trans  &trans  &trans  &trans     &m1
+      &kp C_VOL_UP     &kp F6     &kp F7     &kp F8     &kp F9        &kp F10                                &trans  &trans  &trans  &trans  &trans  &trans
+      &kp C_VOL_DN    &kp F11    &kp F12  &kp LG(C)  &kp LG(V)      &kp LG(X)                                &trans  &trans  &trans  &trans  &trans  &trans
+        &kp K_MUTE  &kp LG(Z)  &kp LG(Y)  &kp LC(C)  &kp LC(V)  &kp LC(RIGHT)  &kp LS(LG(NUMBER_4))  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                          &kp LC(Z)  &kp LC(Y)         &trans         &kp LG(LS(S))  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -96,11 +96,11 @@
 
         ordinal {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp LA(LC(LG(P)))   &kp LC(LA(LEFT))  &kp LA(LC(UP))  &kp LC(LA(RIGHT))  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp LA(LC(LG(N)))   &kp LA(LC(DOWN))    &kp UP_ARROW  &kp LA(LC(RIGHT))  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                             &trans           &kp LEFT        &kp DOWN          &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans             &trans  &kp LA(LC(LG(M)))        &kp DOWN          &kp RIGHT  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans             &trans             &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans             &trans             &trans  &kp LC(LA(LG(P)))    &kp LA(LC(UP))  &kp LA(LC(LG(N)))
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans             &trans  &kp LA(LC(LG(C)))   &kp LA(LC(LEFT))  &kp LA(LC(DOWN))  &kp LA(LC(RIGHT))
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans           &kp LEFT             &kp UP          &kp RIGHT            &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans           &trans  &kp LA(LC(LG(M)))           &kp DOWN             &trans            &trans             &trans
+                        &trans  &trans  &trans  &trans  &kp RCTRL  &kp RIGHT_SHIFT             &trans             &trans
             >;
 
             label = "ordinal";
