@@ -31,6 +31,20 @@
         };
     };
 
+    behaviors {
+        hm: hm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HM";
+            bindings =
+                <&mo>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -43,11 +57,11 @@
             //                     | ALT  | GUI  | LOWER|  ENTER |  | SPACE | RAISE| BSPC  | GUI   |
 
             bindings = <
-       &kp ESC    &kp N1     &kp N2      &kp N3        &kp N4                    &kp N5                                                      &kp N6         &kp N7     &kp N8  &kp N9  &kp N0   &kp BACKSPACE
-       &kp TAB   &kp SQT  &kp COMMA  &kp PERIOD         &kp P                     &kp Y                                                       &kp F          &kp G      &kp C   &kp R   &kp L        &kp FSLH
-    &caps_word     &kp A      &kp O     &lt 3 E       &lt 1 U                     &kp I                                                       &kp D        &lt 2 H      &kp T   &kp N   &kp S       &kp MINUS
-&mt LCTRL LPAR  &kp SEMI      &kp Q       &kp J         &kp K                     &kp X  &kp LEFT_BRACKET  &kp RIGHT_BRACKET                  &kp B          &kp M      &kp W   &kp V   &kp Z  &mt RCTRL RPAR
-                                      &kp LCTRL  &kp LEFT_ALT  &mt LEFT_SHIFT BACKSPACE      &mt LGUI TAB     &mt RGUI ENTER  &mt RIGHT_SHIFT SPACE  &kp RIGHT_ALT  &kp RCTRL
+               &kp ESC    &kp N1     &kp N2      &kp N3        &kp N4                    &kp N5                                               &kp N6         &kp N7     &kp N8  &kp N9  &kp N0            &kp BACKSPACE
+               &kp TAB   &kp SQT  &kp COMMA  &kp PERIOD         &kp P                     &kp Y                                                &kp F          &kp G      &kp C   &kp R   &kp L                 &kp FSLH
+            &caps_word     &kp A      &kp O     &hm 3 E       &hm 1 U                     &kp I                                                &kp D        &hm 2 H      &kp T   &kp N   &kp S                &kp MINUS
+&mt LCTRL LEFT_BRACKET  &kp SEMI      &kp Q       &kp J         &kp K                     &kp X      &kp LPAR        &kp RPAR                  &kp B          &kp M      &kp W   &kp V   &kp Z  &mt RCTRL RIGHT_BRACKET
+                                              &kp LCTRL  &kp LEFT_ALT  &mt LEFT_SHIFT BACKSPACE  &mt LGUI TAB  &mt RGUI ENTER  &mt RIGHT_SHIFT SPACE  &kp RIGHT_ALT  &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
