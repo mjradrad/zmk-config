@@ -57,15 +57,27 @@
             //                     | ALT  | GUI  | LOWER|  ENTER |  | SPACE | RAISE| BSPC  | GUI   |
 
             bindings = <
-               &kp ESC    &kp N1     &kp N2      &kp N3        &kp N4                    &kp N5                                               &kp N6         &kp N7     &kp N8  &kp N9  &kp N0            &kp BACKSPACE
-               &kp TAB   &kp SQT  &kp COMMA  &kp PERIOD         &kp P                     &kp Y                                                &kp F          &kp G      &kp C   &kp R   &kp L                 &kp FSLH
-            &caps_word     &kp A      &kp O     &hm 3 E       &hm 1 U                     &kp I                                                &kp D        &hm 2 H      &kp T   &kp N   &kp S                &kp MINUS
-&mt LCTRL LEFT_BRACKET  &kp SEMI      &kp Q       &kp J         &kp K                     &kp X      &kp LPAR        &kp RPAR                  &kp B          &kp M      &kp W   &kp V   &kp Z  &mt RCTRL RIGHT_BRACKET
-                                              &kp LCTRL  &kp LEFT_ALT  &mt LEFT_SHIFT BACKSPACE  &mt LGUI TAB  &mt RGUI ENTER  &mt RIGHT_SHIFT SPACE  &kp RIGHT_ALT  &kp RCTRL
+       &kp ESC    &kp N1     &kp N2      &kp N3        &kp N4                    &kp N5                                               &kp N6         &kp N7     &kp N8  &kp N9  &kp N0   &kp BACKSPACE
+       &kp TAB   &kp SQT  &kp COMMA  &kp PERIOD         &kp P                     &kp Y                                                &kp F          &kp G      &kp C   &kp R   &kp L        &kp FSLH
+    &caps_word     &kp A      &kp O     &hm 1 E       &hm 2 U                     &kp I                                                &kp D        &hm 3 H      &kp T   &kp N   &kp S       &kp MINUS
+&mt LCTRL LPAR  &kp SEMI      &kp Q       &kp J         &kp K                     &kp X      &kp LPAR        &kp RPAR                  &kp B          &kp M      &kp W   &kp V   &kp Z  &mt RCTRL RPAR
+                                      &kp LCTRL  &kp LEFT_ALT  &mt LEFT_SHIFT BACKSPACE  &mt LGUI TAB  &mt RGUI ENTER  &mt RIGHT_SHIFT SPACE  &kp RIGHT_ALT  &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             label = "base_dv";
+        };
+
+        ordinal {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans             &trans             &trans  &kp LC(LA(LG(P)))    &kp LA(LC(UP))  &kp LA(LC(LG(N)))
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans             &trans  &kp LA(LC(LG(C)))   &kp LA(LC(LEFT))  &kp LA(LC(DOWN))  &kp LA(LC(RIGHT))
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans           &kp LEFT             &kp UP          &kp RIGHT            &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &tog 0     &tog 4           &trans  &kp LA(LC(LG(M)))           &kp DOWN             &trans            &trans             &trans
+                        &trans  &trans  &trans  &trans  &kp RCTRL  &kp RIGHT_SHIFT             &trans             &trans
+            >;
+
+            label = "ordinal";
         };
 
         rhs_no {
@@ -108,16 +120,16 @@
             label = "lhs_fn";
         };
 
-        ordinal {
+        alternate {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                              &trans             &trans             &trans  &kp LC(LA(LG(P)))    &kp LA(LC(UP))  &kp LA(LC(LG(N)))
-&trans  &trans  &trans  &trans  &trans  &trans                              &trans             &trans  &kp LA(LC(LG(C)))   &kp LA(LC(LEFT))  &kp LA(LC(DOWN))  &kp LA(LC(RIGHT))
-&trans  &trans  &trans  &trans  &trans  &trans                              &trans           &kp LEFT             &kp UP          &kp RIGHT            &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans           &trans  &kp LA(LC(LG(M)))           &kp DOWN             &trans            &trans             &trans
-                        &trans  &trans  &trans  &trans  &kp RCTRL  &kp RIGHT_SHIFT             &trans             &trans
+       &kp ESC    &kp N1     &kp N2     &kp N3    &kp N4        &kp N5                                              &kp N6         &kp N7   &kp N8  &kp N9  &kp N0        &kp BSPC
+       &kp TAB   &kp SQT  &kp COMMA    &kp DOT     &kp P         &kp Y                                               &kp F          &kp G    &kp C   &kp R   &kp L        &kp FSLH
+    &caps_word     &kp A      &kp O    &hm 1 E   &hm 2 U         &kp I                                               &kp D        &hm 3 H    &kp T   &kp N   &kp S       &kp MINUS
+&mt LCTRL LPAR  &kp SEMI      &kp Q      &kp J     &kp K         &kp X  &kp LC(LA(DEL))        &kp LG(L)             &kp B          &kp M    &kp W   &kp V   &kp V  &mt RCTRL RPAR
+                                     &kp LCTRL  &kp LGUI  &kp LEFT_ALT    &mt LCTRL TAB  &mt RCTRL ENTER  &mt RSHIFT SPACE  &kp BACKSPACE  &kp DEL
             >;
 
-            label = "ordinal";
+            label = "PC";
         };
     };
 };
