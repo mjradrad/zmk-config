@@ -21,7 +21,7 @@
             compatible = "zmk,behavior-macro";
             label = "M2";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(W) &kp A &kp R &kp AMPS &kp P &kp N3 &kp A &kp C &kp E &kp DOT &kp EXCL &kp AT &kp POUND>;
+            bindings = <&kp LS(H) &kp AT &kp D &kp LS(G) &kp N3 &kp P &kp N4 &kp N0 &kp LS(X) &kp I>;
         };
         sort: sort {
             compatible = "zmk,behavior-macro";
@@ -53,9 +53,7 @@
         hm: hm {
             compatible = "zmk,behavior-hold-tap";
             label = "HM";
-            bindings =
-                <&mo>,
-                <&kp>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -75,11 +73,11 @@
             //                     | ALT  | GUI  | LOWER|  ENTER |  | SPACE | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC       &kp N1    &kp N2     &kp N3      &kp N4        &kp N5                                                  &kp N6                 &kp N7         &kp N8     &kp N9  &kp N0  &kp BACKSPACE
-&kp TAB       &kp SQT   &kp COMMA  &kp PERIOD  &kp P         &kp Y                                                   &kp F                  &kp G          &kp C      &kp R   &kp L   &kp FSLH
-&caps_word    &kp A     &kp O      &hm 2 E     &hm 3 U       &kp I                                                   &kp D                  &hm 4 H        &kp T      &kp N   &kp S   &kp MINUS
-&mt LCTRL LPAR&kp SEMI  &kp Q      &kp J       &kp K         &kp X                     &to 1         &m1             &kp B                  &kp M          &kp W      &kp V   &kp Z   &mt RCTRL RPAR
-                                   &kp LCTRL   &kp LEFT_ALT  &mt LEFT_SHIFT BACKSPACE  &mt LGUI TAB  &mt RGUI ENTER  &mt RIGHT_SHIFT SPACE  &kp RIGHT_ALT  &kp RCTRL
+&kp ESC         &kp N1    &kp N2     &kp N3      &kp N4        &kp N5                                                  &kp N6                 &kp N7         &kp N8     &kp N9  &kp N0  &kp BACKSPACE
+&kp TAB         &kp SQT   &kp COMMA  &kp PERIOD  &kp P         &kp Y                                                   &kp F                  &kp G          &kp C      &kp R   &kp L   &kp FSLH
+&caps_word      &kp A     &kp O      &hm 2 E     &hm 3 U       &kp I                                                   &kp D                  &hm 4 H        &kp T      &kp N   &kp S   &kp MINUS
+&mt LCTRL LPAR  &kp SEMI  &kp Q      &kp J       &kp K         &kp X                     &to 1         &m1             &kp B                  &kp M          &kp W      &kp V   &kp Z   &mt RCTRL RPAR
+                                     &kp LCTRL   &kp LEFT_ALT  &mt LEFT_SHIFT BACKSPACE  &mt LGUI TAB  &mt RGUI ENTER  &mt RIGHT_SHIFT SPACE  &kp RIGHT_ALT  &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -88,11 +86,11 @@
 
         alternate {
             bindings = <
-&kp ESC       &kp N1    &kp N2     &kp N3    &kp N4        &kp N5                                                 &kp N6            &kp N7         &kp N8   &kp N9  &kp N0  &kp BSPC
-&kp TAB       &kp SQT   &kp COMMA  &kp DOT   &kp P         &kp Y                                                  &kp F             &kp G          &kp C    &kp R   &kp L   &kp FSLH
-&caps_word    &hm 5 A   &kp O      &hm 2 E   &hm 3 U       &kp I                                                  &kp D             &hm 4 H        &kp T    &kp N   &kp S   &kp MINUS
-&mt LCTRL LPAR&kp SEMI  &kp Q      &kp J     &kp K         &kp X                &kp LC(LA(DEL))  &kp LG(L)        &kp B             &kp M          &kp W    &kp V   &kp Z   &mt RCTRL RPAR
-                                   &kp LGUI  &kp LEFT_ALT  &mt LSHFT BACKSPACE  &mt LCTRL TAB    &mt RCTRL ENTER  &mt RSHIFT SPACE  &kp BACKSPACE  &kp DEL
+&kp ESC         &kp N1    &kp N2     &kp N3    &kp N4        &kp N5                                                 &kp N6            &kp N7         &kp N8   &kp N9  &kp N0  &kp BSPC
+&kp TAB         &kp SQT   &kp COMMA  &kp DOT   &kp P         &kp Y                                                  &kp F             &kp G          &kp C    &kp R   &kp L   &kp FSLH
+&caps_word      &hm 5 A   &kp O      &hm 2 E   &hm 3 U       &kp I                                                  &kp D             &hm 4 H        &kp T    &kp N   &kp S   &kp MINUS
+&mt LCTRL LPAR  &kp SEMI  &kp Q      &kp J     &kp K         &kp X                &kp LC(LA(DEL))  &kp LG(L)        &kp B             &kp M          &kp W    &kp V   &kp Z   &mt RCTRL RPAR
+                                     &kp LGUI  &kp LEFT_ALT  &mt LSHFT BACKSPACE  &mt LCTRL TAB    &mt RCTRL ENTER  &mt RSHIFT SPACE  &kp BACKSPACE  &kp DEL
             >;
 
             label = "PC";
@@ -100,11 +98,11 @@
 
         ordinal {
             bindings = <
-&trans&trans  &trans  &trans  &trans  &trans                     &trans           &trans             &trans             &kp LC(LA(LG(P)))  &kp LA(LC(UP))    &kp LA(LC(LG(N)))
-&trans&trans  &trans  &trans  &trans  &trans                     &trans           &trans             &kp LA(LC(LG(C)))  &kp LA(LC(LEFT))   &kp LA(LC(DOWN))  &kp LA(LC(RIGHT))
-&trans&trans  &trans  &trans  &trans  &trans                     &trans           &kp LEFT           &kp UP             &kp RIGHT          &trans            &trans
-&trans&trans  &trans  &trans  &trans  &trans  &to 0   &to 1      &trans           &kp LA(LC(LG(M)))  &kp DOWN           &trans             &trans            &trans
-                      &trans  &trans  &trans  &trans  &kp RCTRL  &kp RIGHT_SHIFT  &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans                     &trans           &trans             &trans             &kp LC(LA(LG(P)))  &kp LA(LC(UP))    &kp LA(LC(LG(N)))
+&trans  &trans  &trans  &trans  &trans  &trans                     &trans           &trans             &kp LA(LC(LG(C)))  &kp LA(LC(LEFT))   &kp LA(LC(DOWN))  &kp LA(LC(RIGHT))
+&trans  &trans  &trans  &trans  &trans  &trans                     &trans           &kp LEFT           &kp UP             &kp RIGHT          &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &to 0   &to 1      &trans           &kp LA(LC(LG(M)))  &kp DOWN           &trans             &trans            &trans
+                        &trans  &trans  &trans  &trans  &kp RCTRL  &kp RIGHT_SHIFT  &trans             &trans
             >;
 
             label = "ordinal";
@@ -119,11 +117,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR&bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0                     &kp CARET     &kp PRCNT   &kp ASTRK  &kp SLASH  &kp BACKSLASH         &kp DELETE
-&trans    &trans        &trans        &trans        &trans        &trans                           &kp PLUS      &kp N7      &kp N8     &kp N9     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&trans    &trans        &trans        &trans        &trans        &trans                           &kp MINUS     &kp N4      &kp N5     &kp N6     &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&trans    &trans        &trans        &trans        &trans        &trans        &trans  &kp GRAVE  &kp POUND     &kp N1      &kp N2     &kp N3     &kp LEFT_BRACE        &kp RIGHT_BRACE
-                                      &trans        &trans        &trans        &trans  &kp EQUAL  &kp NUMBER_0  &kp PERIOD  &kp ENTER
+&bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0                     &kp CARET     &kp PRCNT   &kp ASTRK  &kp SLASH  &kp BACKSLASH         &trans
+&trans      &trans        &trans        &trans        &trans        &trans                           &kp PLUS      &kp N7      &kp N8     &kp N9     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&trans      &trans        &trans        &trans        &trans        &trans                           &kp MINUS     &kp N4      &kp N5     &kp N6     &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&trans      &trans        &trans        &trans        &trans        &trans        &trans  &kp GRAVE  &kp POUND     &kp N1      &kp N2     &kp N3     &kp LEFT_BRACE        &kp RIGHT_BRACE
+                                        &trans        &trans        &trans        &trans  &kp EQUAL  &kp NUMBER_0  &kp PERIOD  &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -139,11 +137,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp LC(LS(ESCAPE))&kp F1     &kp F2     &kp F3     &kp F4     &kp F5                                       &trans  &trans  &trans  &trans  &trans  &m2
-&kp C_VOL_UP      &kp F6     &kp F7     &kp F8     &kp F9     &kp F10                                      &trans  &trans  &trans  &trans  &trans  &trans
-&kp C_VOL_DN      &kp F11    &kp F12    &kp LG(C)  &kp LG(V)  &kp LG(X)                                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp K_MUTE        &kp LG(Z)  &kp LG(Y)  &kp LC(C)  &kp LC(V)  &kp LC(RIGHT)  &kp LS(LG(NUMBER_4))  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                        &kp LC(Z)  &kp LC(Y)  &trans         &kp LG(LS(S))         &trans  &trans  &trans  &trans
+&kp LC(LS(ESCAPE))  &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                                       &trans  &trans  &trans  &trans  &trans  &m2
+&kp C_VOL_UP        &kp F6     &kp F7     &kp F8     &kp F9     &kp F10                                      &trans  &trans  &trans  &trans  &trans  &trans
+&kp C_VOL_DN        &kp F11    &kp F12    &kp LG(C)  &kp LG(V)  &kp LG(X)                                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp K_MUTE          &kp LG(Z)  &kp LG(Y)  &kp LC(C)  &kp LC(V)  &kp LC(RIGHT)  &kp LS(LG(NUMBER_4))  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                          &kp LC(Z)  &kp LC(Y)  &trans         &kp LG(LS(S))         &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -152,11 +150,11 @@
 
         excel {
             bindings = <
-&trans&trans  &trans  &trans  &trans  &trans                  &selins       &trans            &selcopy          &trans             &trans            &trans
-&trans&trans  &trans  &trans  &trans  &trans                  &sort         &kp K_CUT         &kp K_COPY        &kp K_PASTE        &trans            &trans
-&trans&trans  &trans  &trans  &trans  &trans                  &trans        &kp LS(LC(LEFT))  &kp LS(LC(UP))    &kp LS(LC(RIGHT))  &kp LC(UP_ARROW)  &trans
-&trans&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans            &kp LS(LC(DOWN))  &kp LC(LEFT)       &kp LC(DOWN)      &kp LC(RIGHT)
-                      &trans  &trans  &trans  &trans  &trans  &kp LA(DOWN)  &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &selins       &trans            &selcopy          &trans             &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &sort         &kp K_CUT         &kp K_COPY        &kp K_PASTE        &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans        &kp LS(LC(LEFT))  &kp LS(LC(UP))    &kp LS(LC(RIGHT))  &kp LC(UP_ARROW)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans            &kp LS(LC(DOWN))  &kp LC(LEFT)       &kp LC(DOWN)      &kp LC(RIGHT)
+                        &trans  &trans  &trans  &trans  &trans  &kp LA(DOWN)  &trans            &trans
             >;
 
             label = "XOrd";
