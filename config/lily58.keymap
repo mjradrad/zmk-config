@@ -22,7 +22,7 @@
             compatible = "zmk,behavior-macro";
             label = "M2";
             #binding-cells = <0>;
-            bindings = <&kp LS(H) &kp AT &kp D &kp LS(G) &kp N3 &kp P &kp N4 &kp N0 &kp LS(X) &kp I>;
+            bindings = <&kp LS(H) &kp AT &kp D &kp LS(G) &kp N3 &kp P &kp N4 &kp N0 &kp LS(X) &kp I &kp AT_SIGN &kp AT_SIGN &kp RETURN>;
         };
 
         sort: sort {
@@ -103,11 +103,11 @@
 
         ordinal {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                     &trans           &trans             &trans             &kp LC(LA(LG(P)))  &kp LA(LC(UP))    &kp LA(LC(LG(N)))
-&trans  &trans  &trans  &trans  &trans  &trans                     &trans           &trans             &kp LA(LC(LG(C)))  &kp LA(LC(LEFT))   &kp LA(LC(DOWN))  &kp LA(LC(RIGHT))
-&trans  &trans  &trans  &trans  &trans  &trans                     &trans           &kp LEFT           &kp UP             &kp RIGHT          &trans            &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &to 0   &to 1      &trans           &kp LA(LC(LG(M)))  &kp DOWN           &trans             &trans            &trans
-                        &trans  &trans  &trans  &trans  &kp RCTRL  &kp RIGHT_SHIFT  &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans                       &trans           &trans             &trans             &kp LC(LA(LG(P)))  &kp LA(LC(UP))    &kp LA(LC(LG(N)))
+&trans  &trans  &trans  &trans  &trans  &trans                       &trans           &trans             &kp LA(LC(LG(C)))  &kp LA(LC(LEFT))   &kp LA(LC(DOWN))  &kp LA(LC(RIGHT))
+&trans  &trans  &trans  &trans  &trans  &trans                       &trans           &kp LEFT           &kp UP             &kp RIGHT          &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp END    &trans           &kp LA(LC(LG(M)))  &kp DOWN           &trans             &trans            &trans
+                        &trans  &trans  &trans  &trans    &kp RCTRL  &kp RIGHT_SHIFT  &trans             &trans
             >;
 
             label = "ordinal";
