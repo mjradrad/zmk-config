@@ -22,7 +22,7 @@
             compatible = "zmk,behavior-macro";
             label = "M2";
             #binding-cells = <0>;
-            bindings = <&kp LS(H) &kp AT &kp D &kp LS(G) &kp N3 &kp P &kp N4 &kp N0 &kp LS(X) &kp I &kp AT_SIGN &kp EXCLAMATION>;
+            bindings = <&kp LS(W) &kp A &kp R &kp AMPS &kp P &kp N3 &kp A &kp C &kp E &kp EXCL>;
         };
 
         sort: sort {
